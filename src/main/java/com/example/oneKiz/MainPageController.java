@@ -19,6 +19,10 @@ public class MainPageController {
     private final FileChooser fil_chooser = new FileChooser();
     private final DirectoryChooser dir_chooser = new DirectoryChooser();
     private final Converter converter = new Converter();
+
+    /*
+    Обрабатывает клик по кнопке "Посмотреть результат"
+     */
     EventHandler<ActionEvent> openEvent =
             e -> {
                 if (converter.getOutDirectory() == null) {
@@ -35,6 +39,10 @@ public class MainPageController {
                     }
                 }
             };
+
+    /*
+    Обрабатывает клик по кнопке "Выбрать папку сохранения"
+     */
     EventHandler<ActionEvent> saveEvent =
             e -> {
 
@@ -45,6 +53,10 @@ public class MainPageController {
                     converter.setOutDirectory(file.getAbsolutePath());
                 }
             };
+
+    /*
+    Обрабатывает клик по кнопке "Выбрать файл для форматирования"
+     */
     EventHandler<ActionEvent> chooseEvent = e -> {
         if (converter.getOutDirectory() == null) {
             AlertsFactory.getWarningAlert(CHOOSE_DIRECTORY_MESSAGE);
@@ -58,6 +70,7 @@ public class MainPageController {
             }
         }
     };
+
     @FXML
     private Button chooseButton;
     @FXML
