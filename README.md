@@ -1,4 +1,4 @@
-# **![Логотип приложения](src/main/resources/small icon.ico)**  
+# **![Логотип приложения](src/main/resources/small-icon.png)**  
 
 ## 1,KIZ, – Java-приложение для работы с "Честным знаком". 
 
