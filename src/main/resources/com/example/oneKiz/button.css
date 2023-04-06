@@ -1,0 +1,19 @@
+.button {
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    /*-fx-border-color: #FFE4C4;*/
+    -fx-background-color: #F39C63;
+    cursor: pointer; // seems like Cursor.HAND
+}
+
+.button:hover {
+    -fx-background-color: #FFC125;
+}
+
+.button:pressed {
+    -fx-background-color: #FFDAB9; /* maybe some other color */
+}
+/*
+fx:id="saveButton" layoutX="281.0" layoutY="178.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="238.0"
+style="-fx-background-color: #F39C63;" text="Выбрать папку сохранения" textFill="#fafafa"
+ */
