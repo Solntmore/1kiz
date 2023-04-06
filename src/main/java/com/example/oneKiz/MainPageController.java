@@ -12,74 +12,64 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
+import static com.example.oneKiz.Constants.*;
+
 public class MainPageController {
 
     private final FileChooser fil_chooser = new FileChooser();
     private final DirectoryChooser dir_chooser = new DirectoryChooser();
     private final Converter converter = new Converter();
-
-    @FXML
-    private Button chooseButton;
-    @FXML
-    private Button openButton;
-    @FXML
-    private Button saveButton;
-   /* @FXML
-    private Label centralLabel;
-*/
-    @FXML
-    private AnchorPane main;
-
-    @FXML
-    private AnchorPane subMain;
-
-
-
     EventHandler<ActionEvent> openEvent =
             e -> {
                 if (converter.getOutDirectory() == null) {
-                   /* centralLabel.setText("Сначала выберите папку сохранения, только потом можно выбрать файл, который вы " +
-                            "хотите конвертировать!");*/
+                    AlertsFactory.getWarningAlert(CHOOSE_DIRECTORY_MESSAGE);
                 } else {
                     String path = converter.getOutDirectory() + "\\output.txt";
                     try {
                         File file = new File(path);
                         Desktop desktop = Desktop.getDesktop();
                         desktop.open(file);
-                    } catch (IOException ex) {
-                       /* centralLabel.setText("Сначала выберите папку сохранения, только потом можно выбрать файл, который вы " +
-                                "хотите конвертировать!");*/
+                    } catch (IllegalArgumentException | IOException ex) {
+                        AlertsFactory.getWarningAlert(NO_FILE_MESSAGE);
                         throw new RuntimeException(ex);
                     }
                 }
             };
-
     EventHandler<ActionEvent> saveEvent =
             e -> {
 
                 File file = dir_chooser.showDialog(KizApplication.getPrimaryStage());
 
                 if (file != null) {
-                  /*  centralLabel.setText("Файлы будут сохраняться в папку по адресу " + file.getAbsolutePath()
-                    );*/
+                    AlertsFactory.getInfoAlert(SAVE_DIRECTORY_MESSAGE + file.getAbsolutePath());
                     converter.setOutDirectory(file.getAbsolutePath());
                 }
             };
     EventHandler<ActionEvent> chooseEvent = e -> {
         if (converter.getOutDirectory() == null) {
-           /* centralLabel.setText("Сначала выберите папку сохранения, только потом можно выбрать файл, который вы " +
-                    "хотите конвертировать!");*/
+            AlertsFactory.getWarningAlert(CHOOSE_DIRECTORY_MESSAGE);
         } else {
             File file = fil_chooser.showOpenDialog(KizApplication.getPrimaryStage());
 
             if (file != null) {
-               /* centralLabel.setText("Кажется получилось, проверьте результат в папке сохранения, которую вы выбрали " +
-                        "ранее");*/
+                AlertsFactory.getInfoAlert(SUCCESS_SAVE_MESSAGE);
                 converter.setInDirectory(file.getAbsolutePath());
                 converter.convertXlsToCsv();
             }
         }
     };
+    @FXML
+    private Button chooseButton;
+    @FXML
+    private Button openButton;
+    @FXML
+    private Button saveButton;
+    @FXML
+    private AnchorPane main;
+    @FXML
+    private AnchorPane subMain;
+    @FXML
+    private Button closeButton1;
 
     @FXML
     private void initialize() {
