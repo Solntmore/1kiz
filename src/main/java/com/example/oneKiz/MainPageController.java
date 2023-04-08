@@ -1,14 +1,22 @@
 package com.example.oneKiz;
 
+import com.example.oneKiz.AlertsFactory;
+import com.example.oneKiz.Converter;
+import com.example.oneKiz.KizApplication;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import javafx.scene.Node;
 import javafx.util.Duration;
 
 import java.awt.*;
@@ -76,6 +84,19 @@ public class MainPageController implements Initializable {
         }
     };
 
+    EventHandler<ActionEvent> guideEvent = e -> {
+        try {
+            Parent guideParent = FXMLLoader.load(getClass().getResource("guideFirst.fxml"));
+            Scene guideScene = new Scene(guideParent);
+            Stage appStage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+            appStage.setScene(guideScene);
+            appStage.show();
+        } catch (IOException ex) {
+            AlertsFactory.getWarningAlert("Упс, кажется что-то пошло не так! Не удалось открыть инструкцию:(");
+            throw new RuntimeException(ex);
+        }
+    };
+
     EventHandler<ActionEvent> reportEvent = e -> {
             AlertsFactory.getInfoAlert("Буду рад узнать ваши впечатления и пожелания:\nEmail: " +
                     "solntsev1099@yandex.ru\nTelegram: https://t.me/solntmore");
@@ -110,6 +131,7 @@ public class MainPageController implements Initializable {
         saveButton.setOnAction(saveEvent);
         openButton.setOnAction(openEvent);
         reportButton.setOnAction(reportEvent);
+        guideButton.setOnAction(guideEvent);
         slider.setTranslateX(-205);
         menu.setOnAction(event -> {
             TranslateTransition slide = new TranslateTransition();
