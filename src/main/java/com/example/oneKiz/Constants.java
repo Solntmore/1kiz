@@ -8,5 +8,4 @@ public class Constants {
             "которую вы выбрали ранее.";
     public final static String NO_FILE_MESSAGE = "Кажется, вы еще не сконвертировали файл, результат не найден. " +
             "Проверьте в папке вывода.";
-
 }

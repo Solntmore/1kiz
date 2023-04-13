@@ -1,5 +1,6 @@
 module com.example.demo {
     requires javafx.controls;
+    requires javafx.graphics;
     requires javafx.fxml;
     requires javafx.web;
 
@@ -13,4 +14,6 @@ module com.example.demo {
 
     opens com.example.oneKiz to javafx.fxml;
     exports com.example.oneKiz;
+    exports com.example.oneKiz.service;
+    opens com.example.oneKiz.service to javafx.fxml;
 }

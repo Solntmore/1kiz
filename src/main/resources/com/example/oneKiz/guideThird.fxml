@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oneKiz.GuideThirdController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #2E3348;">
+         <effect>
+            <Blend />
+         </effect>
+         <children>
+            <AnchorPane layoutY="102.0" prefHeight="398.0" prefWidth="800.0" style="-fx-background-color: #fafafa;">
+               <children>
+                  <Label layoutX="347.0" layoutY="10.0" prefHeight="287.0" prefWidth="399.0" text="Шаг 3. В результате в папке, которую вы выбрали ранее получиться примерно такой файл с названием output.txt. Можете просто копировать и вставлять в личный кабинет в &quot;Честном знаке." textAlignment="JUSTIFY" textFill="#6e6b6b" textOverrun="CLIP" wrapText="true">
+                     <font>
+                        <Font name="Yandex Sans Text Medium" size="19.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="nextButton" alignment="TOP_CENTER" cache="true" layoutX="624.0" layoutY="322.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="37.0" prefWidth="148.0" stylesheets="@button.css" text="Конец" textFill="#fafafa" textOverrun="CLIP">
+                     <font>
+                        <Font name="Yandex Sans Display Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../arrow5.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="backButton" alignment="BASELINE_CENTER" cache="true" layoutX="35.0" layoutY="322.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="148.0" stylesheets="@button.css" text="Вернуться" textFill="#fafafa" textOverrun="CLIP">
+                     <font>
+                        <Font name="Yandex Sans Display Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../arrow5.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Pane layoutX="14.0" layoutY="14.0" prefHeight="287.0" prefWidth="299.0" style="-fx-background-color: #2E3348#F39C63; -fx-background-radius: 10;" />
+                  <ImageView id="imageTable" fitHeight="277.0" fitWidth="290.0" layoutX="20.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resultTxt.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="83.0" fitWidth="83.0" layoutX="703.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../logo-romb-png.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="184.0" fitWidth="186.0" layoutX="308.0" layoutY="-41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../logo-png-white-text.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
