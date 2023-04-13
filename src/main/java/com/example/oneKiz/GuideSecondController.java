@@ -1,5 +1,6 @@
 package com.example.oneKiz;
 
+import com.example.oneKiz.service.AlertsFactory;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;

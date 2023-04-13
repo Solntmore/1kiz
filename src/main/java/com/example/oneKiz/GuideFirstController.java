@@ -1,6 +1,7 @@
 package com.example.oneKiz;
 
-import com.example.oneKiz.AlertsFactory;
+import com.example.oneKiz.service.AlertsFactory;
+import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -11,7 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -23,6 +24,11 @@ public class GuideFirstController implements Initializable {
 
     @FXML
     private Button nextButton;
+    @FXML
+    private Button resizeButton;
+    @FXML
+    private Image imageTable;
+
 
     EventHandler<ActionEvent> nextEvent = e -> {
         try {

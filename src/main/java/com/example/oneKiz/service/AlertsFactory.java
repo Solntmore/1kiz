@@ -1,4 +1,4 @@
-package com.example.oneKiz;
+package com.example.oneKiz.service;
 
 import javafx.scene.control.Alert;
 import javafx.scene.layout.Region;

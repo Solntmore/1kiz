@@ -1,8 +1,7 @@
 package com.example.oneKiz;
 
-import com.example.oneKiz.AlertsFactory;
-import com.example.oneKiz.Converter;
-import com.example.oneKiz.KizApplication;
+import com.example.oneKiz.service.AlertsFactory;
+import com.example.oneKiz.service.Converter;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -102,6 +101,12 @@ public class MainPageController implements Initializable {
                     "solntsev1099@yandex.ru\nTelegram: https://t.me/solntmore");
     };
 
+    EventHandler<ActionEvent> settingsEvent = e -> {
+        AlertsFactory.getInfoAlert("Эта функция находится на стадии разработки. Свои идеи для настроек вы можете прислать " +
+                "на эти контакты\nEmail: " +
+                "solntsev1099@yandex.ru\nTelegram: https://t.me/solntmore");
+    };
+
     @FXML
     private AnchorPane main;
     @FXML
@@ -132,6 +137,7 @@ public class MainPageController implements Initializable {
         openButton.setOnAction(openEvent);
         reportButton.setOnAction(reportEvent);
         guideButton.setOnAction(guideEvent);
+        settingsButton.setOnAction(settingsEvent);
         slider.setTranslateX(-205);
         menu.setOnAction(event -> {
             TranslateTransition slide = new TranslateTransition();

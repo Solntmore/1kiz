@@ -19,16 +19,11 @@
          <children>
             <AnchorPane layoutY="102.0" prefHeight="398.0" prefWidth="800.0" style="-fx-background-color: #fafafa;">
                <children>
-                  <Label layoutX="23.0" prefHeight="83.0" prefWidth="754.0" text="Шаг 2. Удалите все колонки так, чтобы у вас осталась только одна колонка с КИЗами и она была самой первой. Если не удалить лишние элементы или колонка с КИЗами не будет первой, то результат может получиться не верный." textAlignment="JUSTIFY" textFill="#6e6b6b" textOverrun="CLIP" wrapText="true">
+                  <Label layoutX="346.0" layoutY="17.0" prefHeight="287.0" prefWidth="425.0" text="Шаг 2. Удалите все колонки так, чтобы у вас осталась только одна колонка с КИЗами и она была самой первой. Если не удалить лишние элементы или колонка с КИЗами не будет первой, то результат может получиться не верный." textAlignment="JUSTIFY" textFill="#6e6b6b" textOverrun="CLIP" wrapText="true">
                      <font>
                         <Font name="Yandex Sans Text Medium" size="19.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="277.0" fitWidth="290.0" layoutX="256.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../correct-input.png" />
-                     </image>
-                  </ImageView>
                   <Button fx:id="nextButton" alignment="TOP_CENTER" cache="true" layoutX="624.0" layoutY="322.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="37.0" prefWidth="148.0" stylesheets="@button.css" text="Дальше" textFill="#fafafa" textOverrun="CLIP">
                      <font>
                         <Font name="Yandex Sans Display Bold" size="18.0" />
@@ -59,6 +54,12 @@
                         </ImageView>
                      </graphic>
                   </Button>
+                  <Pane layoutX="14.0" layoutY="14.0" prefHeight="287.0" prefWidth="299.0" style="-fx-background-color: #2E3348; -fx-background-radius: 10;" />
+                  <ImageView id="imageTable" fitHeight="277.0" fitWidth="290.0" layoutX="20.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../correct-input.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
             <ImageView fitHeight="83.0" fitWidth="83.0" layoutX="703.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
