@@ -1,0 +1,8 @@
+.button {
+    -fx-background-color: #00000000;
+    cursor: pointer; // seems like Cursor.HAND
+}
+
+.button:hover {
+    transform: scale(1.5);
+}

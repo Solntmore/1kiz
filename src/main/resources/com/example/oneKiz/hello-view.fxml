@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -8,6 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oneKiz.MainPageController">
@@ -43,14 +45,79 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Label layoutX="103.0" layoutY="94.0" prefHeight="83.0" prefWidth="593.0" text="Сначала выберите папку сохранения, затем выберите файл, который вы хотите конвертировать" textAlignment="CENTER" textFill="#6e6b6b" textOverrun="CLIP" wrapText="true">
+                  <Label layoutX="214.0" layoutY="87.0" prefHeight="83.0" prefWidth="372.0" text="Сначала выберите папку сохранения, затем выберите файл, который вы хотите конвертировать" textAlignment="CENTER" textFill="#6e6b6b" textOverrun="CLIP" wrapText="true">
                      <font>
                         <Font name="Yandex Sans Text Medium" size="19.0" />
                      </font>
                   </Label>
+                  <AnchorPane fx:id="slider" layoutX="-2.0" layoutY="-1.0" prefHeight="398.0" prefWidth="206.0" style="-fx-background-color: #2E3348;">
+                     <children>
+                        <VBox layoutX="12.0" layoutY="70.0" prefHeight="345.0" prefWidth="194.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="53.0">
+                           <children>
+                              <Button fx:id="guideButton" alignment="BOTTOM_LEFT" cache="true" mnemonicParsing="false" prefHeight="36.0" prefWidth="199.0" text="   Инструкция" textAlignment="CENTER" textFill="#fafafa">
+                                 <font>
+                                    <Font name="Yandex Sans Display Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../info-512.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <stylesheets>
+                                    <URL value="@button.css" />
+                                    <URL value="@sliderButton.css" />
+                                 </stylesheets>
+                              </Button>
+                              <Button fx:id="reportButton" alignment="BOTTOM_LEFT" cache="true" mnemonicParsing="false" prefHeight="42.0" prefWidth="199.0" text="   Оставить отзыв" textFill="#fafafa">
+                                 <font>
+                                    <Font name="Yandex Sans Display Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../mail-512.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <stylesheets>
+                                    <URL value="@button.css" />
+                                    <URL value="@sliderButton.css" />
+                                 </stylesheets>
+                              </Button>
+                              <Button fx:id="settingsButton" alignment="BOTTOM_LEFT" cache="true" mnemonicParsing="false" prefHeight="42.0" prefWidth="199.0" text="   Настройки" textFill="#fafafa">
+                                 <font>
+                                    <Font name="Yandex Sans Display Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../settings-5-512.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <stylesheets>
+                                    <URL value="@button.css" />
+                                    <URL value="@sliderButton.css" />
+                                 </stylesheets>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
-            <ImageView fitHeight="83.0" fitWidth="83.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="83.0" fitWidth="83.0" layoutX="703.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../logo-romb-png.png" />
                </image>
@@ -60,6 +127,44 @@
                   <Image url="@../../../logo-png-white-text.png" />
                </image>
             </ImageView>
+            <Button fx:id="menuBack" alignment="BOTTOM_LEFT" cache="true" layoutX="7.0" layoutY="35.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" text="МЕНЮ" textFill="#fafafa">
+               <font>
+                  <Font name="Yandex Sans Display Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../menu2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <stylesheets>
+                  <URL value="@button.css" />
+                  <URL value="@sliderButton.css" />
+               </stylesheets>
+            </Button>
+            <Button fx:id="menu" alignment="BOTTOM_LEFT" cache="true" layoutX="7.0" layoutY="35.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" text="МЕНЮ" textFill="#fafafa">
+               <font>
+                  <Font name="Yandex Sans Display Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../menu2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <stylesheets>
+                  <URL value="@button.css" />
+                  <URL value="@sliderButton.css" />
+               </stylesheets>
+            </Button>
          </children>
       </AnchorPane>
    </children>

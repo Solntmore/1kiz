@@ -1,16 +1,16 @@
 .button {
     -fx-border-width: 2;
     -fx-border-radius: 10;
-    -fx-background-color: #F39C63;
+    -fx-background-color: #2E3348;
     cursor: pointer; // seems like Cursor.HAND
 }
 
 .button:hover {
-    -fx-background-color: #f4a460;
+    -fx-background-color: #39405a;
 }
 
 .button:pressed {
-    -fx-background-color: #FFDAB9; /* maybe some other color */
+    -fx-background-color: #d1ccb7; /* maybe some other color */
 }
 /*
 fx:id="saveButton" layoutX="281.0" layoutY="178.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="238.0"
